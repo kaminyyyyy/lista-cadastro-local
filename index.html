@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários</title>
+    <script type="text/javascript" src="main.js"></script>
+
+    <style>
+        #listaRegistros{ display: none;}
+        #cadastroRegistros{ display: none;}
+
+        body[page=lista] #listaRegistros{display: block;}
+        body[page=cadastro]#cadastroRegistros{display: block;}
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        table{
+            width: 100%;
+            border-collapse:collapse;
+        }
+
+        table th,
+        table td{
+            font-size:  14px;
+            padding: 10px 15px;
+            border: solid 1px #ccc;
+        }
+
+        button{
+            border: none;
+            border-radius: 4px;
+            background-color: #07a;
+            color: #fff;
+            margin: 3px;
+            padding: 10px 15px;
+
+        }
+
+        button.cinza{
+            background-color: #ccc;
+            color: #666
+        }
+
+        button:hover{
+            opacity: 0.8;
+        }
+
+
+
+    </style>
+
+</head>
+<body page='lista'>
+    
+    <div id='listaRegistros'>
+      
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Fone</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div>
+            <button onclick="vizualiar('cadastro')">Novo Usuário</button>
+        </div>
+        
+    
+    </div>
+
+
+     <div id='cadastroRegistros'>
+
+        <div class='label'>
+            <div>ID</div>
+            <div>
+                <input type='numer'>
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>Nome</div>
+            <div>
+                <input>
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>Fone</div>
+            <div>
+                <input type='tel'>
+            </div>
+        </div>
+
+        <div>
+            <button>Salvar</button>
+            <button onclick="vizualiar('lista')" class="cinza">Cancelar</button>
+        </div>
+
+        
+     </div>
+</body>
+</html>
